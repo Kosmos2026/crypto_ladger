@@ -16,7 +16,7 @@ class TransactionOut(TransactionBase):
     id: int
     timestamp: datetime.datetime
 
-# Модель для блока
+# Модель для блокаf
 class BlockBase(BaseModel):
     previous_hash: str 
     transactions_count: int 
