@@ -14,6 +14,11 @@ app = FastAPI(title="CryptoLedger API")
 def read_root():
     return {"message": "Добро пожаловать в CryptoLedger API!"}
 
+@app.post("/transactions/", summary="Создать транзакцию", response_description="Созданная транзакция")
+def create_transaction(transaction: models.TransactionCreate):
+    ans = crud.create_transaction(transaction)
+    ans.update({"message": "Транзакция успешно создана!"})
+    return ans
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
