@@ -10,7 +10,7 @@ import dotenv
 import os   
 
 dotenv.load_dotenv()
-DEV = os.environ["DEV"] = os.getenv("DEV")
+DEV = os.getenv("DEV")
 
 
 app = FastAPI(title="CryptoLedger API")
