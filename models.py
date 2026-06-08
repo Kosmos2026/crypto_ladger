@@ -19,7 +19,7 @@ class TransactionOut(TransactionBase):
 # Модель для блокаf
 class BlockBase(BaseModel):
     previous_hash: str 
-    transactions_count: int 
+    transactions_ids: list[int] 
     miner: str 
 
 class BlockCreate(BlockBase):
@@ -30,3 +30,5 @@ class BlockOut(BlockBase):
     hash: str # Хэш этого блока (упрощенный)
     timestamp: datetime.datetime
     is_mined: bool # Флаг, показывающий, что блок "подтвержден"
+    
+    
