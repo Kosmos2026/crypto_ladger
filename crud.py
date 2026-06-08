@@ -1,6 +1,6 @@
 import hashlib
 
-from numpy import block
+
 
 from models import TransactionCreate, TransactionOut, BlockCreate, BlockOut
 from storage import transactions
